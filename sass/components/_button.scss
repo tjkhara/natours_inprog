@@ -26,6 +26,7 @@
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
 
+  // White button
   &--white {
     background-color: $color-white;
     color: #777;
@@ -35,6 +36,7 @@
     }
   }
 
+  // Green button
   &--green {
     background-color: $color-primary;
     color: $color-white;
@@ -63,6 +65,7 @@
   }
 }
 
+// Small text button
 .btn-text {
   &:link,
   &:visited {
