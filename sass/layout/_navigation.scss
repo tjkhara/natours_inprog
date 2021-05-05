@@ -3,6 +3,8 @@
     display: none;
   }
 
+  // white circle
+  // This is the label of the checkbox - this will be clicked
   &__button {
     background-color: $color-white;
     // This is also a circle slightly bigger than the background circle
@@ -14,6 +16,7 @@
     right: 6rem;
     border-radius: 50%;
     z-index: 2000;
+    box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
   }
 
   // This is the green colored circle
@@ -33,18 +36,29 @@
     z-index: 1000;
 
     // This is to grow the circle
-    transform: scale(80);
+    // This was here for initial testing
+    // transform: scale(80);
+
+    // In the initial state there is no scaling
+
+    // Put some animation on this
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   }
 
   //   This is a huge element that covers the entire viewport
   // so that we can center the links over this horizontally and vertically
   &__nav {
     height: 100vh;
-    width: 100%;
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     z-index: 1500;
+
+    // initial state - hide this element
+    opacity: 0;
+    width: 0;
+
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
   // This is the ul
@@ -58,6 +72,7 @@
     // List style
     list-style: none;
     text-align: center;
+    width: 100%;
   }
 
   &__item {
@@ -95,5 +110,17 @@
       margin-right: 1.5rem;
       display: inline-block;
     }
+  }
+
+  // Use the general sibling selector to select the background div
+  &__checkbox:checked ~ &__background {
+    // Final checked state we scale this to 80
+    transform: scale(80);
+  }
+
+  &__checkbox:checked ~ &__nav {
+    // checked state - show this element
+    opacity: 1;
+    width: 100%;
   }
 }
