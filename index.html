@@ -186,13 +186,14 @@
         </div>
       </section>
 
-      <section class="section-tours">
+      <section class="section-tours" id="section-tours">
         <!-- Centered heading secondary start -->
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">Most popular tours</h2>
         </div>
         <!-- Centered heading secondary end -->
         <div class="row">
+          <!-- First col -->
           <div class="col-1-of-3">
             <div class="card">
               <div class="card__side card__side--front">
@@ -218,11 +219,13 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$297</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now!</a>
+                  <a href="#popup" class="btn btn--white">Book now!</a>
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- second col -->
           <div class="col-1-of-3">
             <div class="card">
               <div class="card__side card__side--front">
@@ -248,11 +251,13 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$497</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now!</a>
+                  <a href="#popup" class="btn btn--white">Book now!</a>
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- third col -->
           <div class="col-1-of-3">
             <div class="card">
               <div class="card__side card__side--front">
@@ -278,7 +283,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$897</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now!</a>
+                  <a href="#popup" class="btn btn--white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -487,14 +492,18 @@
 
     <!-- Pop up start -->
     <!-- This div is for the dark background -->
-    <div class="popup">
+    <div class="popup" id="popup">
       <!-- This div is for the content -->
       <div class="popup__content">
+        <!-- left side -->
         <div class="popup__left">
           <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img" />
           <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img" />
         </div>
+        <!-- right side -->
         <div class="popup__right">
+          <!-- Close button -->
+          <a href="#section-tours" class="popup__close">&times;</a>
           <h2 class="heading-secondary u-margin-bottom-small">
             Start booking now
           </h2>
