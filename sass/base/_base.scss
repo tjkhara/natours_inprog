@@ -18,7 +18,7 @@ html {
     font-size: 56.25%;
   }
 
-  // if the width < 600?
+  // if the width < 900?
   @include respond(tab-port) {
     // Suppose we want 1rem = 8px, 8/16 = 50%
     font-size: 50%;
@@ -38,4 +38,10 @@ html {
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+
+  // if the width < 900?
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }

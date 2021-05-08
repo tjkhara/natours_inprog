@@ -20,6 +20,17 @@
 
     text-align: center;
     cursor: pointer;
+
+    // To move the nav more into the corner
+    @include respond(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include respond(phone) {
+      top: 3rem;
+      right: 3rem;
+    }
   }
 
   // This is the green colored circle
@@ -46,6 +57,16 @@
 
     // Put some animation on this
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+
+    @include respond(tab-port) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+
+    @include respond(phone) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
 
   //   This is a huge element that covers the entire viewport
